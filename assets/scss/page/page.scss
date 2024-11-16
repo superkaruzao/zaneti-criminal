@@ -1,0 +1,338 @@
+@import '../base';
+
+#whatsapp {
+    background: $color-whatsapp;
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: 0.5s;
+    text-decoration: none;
+    z-index: 999;
+
+    &:hover {
+        box-shadow: 0 0 10px $color-whatsapp;
+        cursor: pointer;
+    }
+
+    i {
+        font-size: 3.5rem;
+        color: #fff;
+        transform: translateX(2%);
+    }
+}
+
+@import '../header';
+
+main {
+    .container1 {
+        background: url(../../img/bgs/bg1.jpg) center no-repeat;
+        background-size: cover;
+        position: relative;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            position: relative;
+            padding: 8rem 0;
+
+            @media screen and (max-width:540px) {
+                flex-direction: column;
+                padding-bottom: 0;
+                padding-top: 3rem;
+            }
+
+            .content {
+                width: 60%;
+                max-width: 100%;
+                color: #fff;
+                position: relative;
+                z-index: 999;
+
+                @media screen and (max-width:1540px) {
+                    width: 55%;
+                }
+
+                @media screen and (max-width:1420px) {
+                    width: 50%;
+                }
+
+                @media screen and (max-width:540px) {
+                    width: 100%;
+                    z-index: 1;
+                    text-align: center !important;
+                }
+
+                .title {
+                    font-size: 1.75rem;
+                    margin-bottom: 1rem;
+                    color: $color-secondary;
+                }
+
+                .text {
+                    text-align: justify;
+                }
+
+                .subtitle {
+                    font-weight: 600;
+                }
+            }
+
+            .persona {
+                display: grid;
+                position: absolute;
+                width: 31rem;
+                right: -10%;
+                bottom: 0;
+
+                @media screen and (max-width:1540px) {
+                    position: relative;
+                    width: 75%;
+                    margin: auto;
+                    margin-top: 0rem;
+                    right: 0;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .container2 {
+        background: #838383;
+        padding: 4rem 0;
+        box-shadow: 0 0 50px 0 #838383;
+        border-radius: 0 0 1rem 1rem;
+
+        .container {
+            color: #fff;
+            text-align: center;
+
+            .title {
+                color: $color-secondary;
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .text {
+                width: 50rem;
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+    }
+
+    .container3 {
+        padding: 4rem 0;
+
+        .container {
+            .title {
+                font-size: 1.75rem;
+                text-align: center;
+            }
+
+            & > .subtitle {
+                text-align: center;
+                font-weight: 600
+            }
+
+            .contents {
+                display: flex;
+                gap: 35px 10px;
+                margin-bottom: 2rem;
+                margin-top: 3rem;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .content {
+                    background: #fff;
+                    padding: 1rem 2rem;
+                    border-radius: 1rem;
+                    position: relative;
+                    border: 5px solid #000;
+                    width: calc(50% - 2rem - 20px);
+
+                    @media screen and (max-width:540px){
+                        width: 100%;
+                    }
+
+                    .favicon {
+                        width: 50px;
+                        height: 50px;
+                        background: $color-secondary;
+                        border-radius: 0.5rem;
+                        position: absolute;
+                        left: 2rem;
+                        top: 0;
+                        transform: translateY(-50%);
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        border: 3px solid #000;
+                        justify-content: center;
+                        align-items: center;
+                        justify-items: center;
+
+                        img {
+                            width: 80%;
+                        }
+                    }
+
+                    .subtitle {
+                        color: #000;
+                        font-weight: 700;
+                    }
+
+                    .text {
+                        color: #000;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .container4 {
+        padding: 4rem 0;
+
+        .container {
+            .title {
+                font-size: 1.75rem;
+                text-align: center;
+            }
+
+            & > .subtitle {
+                text-align: center;
+                font-weight: 600
+            }
+
+            .contents {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-gap: 35px 10px;
+                margin-bottom: 2rem;
+                margin-top: 3rem;
+
+                @media screen and (max-width:540px){
+                    grid-template-columns: 1fr;
+                    grid-gap: 50px 0;
+                }
+
+                .content {
+                    background: #fff;
+                    padding: 1rem 2rem;
+                    border-radius: 1rem;
+                    position: relative;
+                    border: 5px solid #000;
+
+                    .favicon {
+                        width: 50px;
+                        height: 50px;
+                        background: $color-secondary;
+                        border-radius: 0.5rem;
+                        position: absolute;
+                        left: 2rem;
+                        top: 0;
+                        transform: translateY(-50%);
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        border: 3px solid #000;
+
+                        i {
+                            font-size: 1.5rem;
+                            color: #fff;
+                        }
+                    }
+
+                    .subtitle {
+                        color: #000;
+                        font-weight: 700;
+                    }
+
+                    .text {
+                        color: #000;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .container5 {
+        padding: 4rem 0;
+        background: url(../../img/bgs/bg3.jpg) center no-repeat;
+        background-size: cover;
+        position: relative;
+        border-radius: 2rem;
+        box-shadow: 0 0 50px 0 #838383;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 2rem;
+        }
+
+        .container {
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 999;
+
+            .title {
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+
+            .text {
+                width: 50rem;
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+    }
+
+    .container6 {
+        padding: 4rem 0;
+
+        .container {
+            & > .title {
+                text-align: center;
+                font-size: 1.75rem;
+            } 
+
+            @import '../faq';
+
+            & > .CTA{
+                text-align: center;
+                margin: 3rem 0 1rem 0;
+            }
+        }
+    }
+}
+
+.CTA {
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+}

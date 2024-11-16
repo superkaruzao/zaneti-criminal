@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    @media screen and (min-width: 1280px){
+        & {
+            font-size: 110%;
+        }
+    }
+
+    @media screen and (max-width: 1280px){
+        & {
+            font-size: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1080px){
+        & {
+            font-size: 92.75%;
+        }
+    }
+
+    @media screen and (max-width: 720px){
+        & {
+            font-size: 87.5%;
+        }
+    }
+}
+
+
+@import 'variables';
+
+[data-anime] {
+    opacity: 0;
+    transition: 1.1s;
+}
+
+[data-anime = "top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime = "bottom"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime = "left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime = "right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width:540px){
+    [data-anime = "top"] {
+        transform: translate3d(0, -20px, 0);
+    }
+    
+    [data-anime = "bottom"] {
+        transform: translate3d(0, 20px, 0);
+    }
+    
+    [data-anime = "left"] {
+        transform: translate3d(-20px, 0, 0);
+    }
+    
+    [data-anime = "right"] {
+        transform: translate3d(20px, 0, 0);
+    }
+}
+
+[data-desk] {
+    @media screen and (max-width:540px){
+        display: none !important;
+    }
+}
+
+[data-cell] {
+    @media screen and (min-width:540px){
+        display: none !important;
+    }
+}
